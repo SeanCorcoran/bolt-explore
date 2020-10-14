@@ -1,6 +1,6 @@
 'use strict';
 
-async function sayHello({ message, say }) {
+async function sayHello({ message, say }, buttonID) {
   // Basic Hello
   // await say(`Hey there <@${message.user}>!`); 
 
@@ -19,7 +19,7 @@ async function sayHello({ message, say }) {
             "type": "plain_text",
             "text": "Click Me"
           },
-          "action_id": "button_click"
+          "action_id": `${buttonID}`
         }
       }
     ],

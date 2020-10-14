@@ -12,9 +12,9 @@ const app = new App({
 // Commands go here
 
 // Listens to incoming messages that contain "hello"
-app.message('hello', async ({ message, say }) => sayHello({ message, say }));
+app.message('hello', async ({ message, say }) => sayHello({ message, say }, 'hello_button'));
 // Responds to the button when clicked
-app.action('button_click', async ({ body, ack, say }) => helloButton({ body, ack, say}));
+app.action('hello_button', async ({ body, ack, say }) => helloButton({ body, ack, say}));
 
 
 
